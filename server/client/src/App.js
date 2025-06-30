@@ -5,8 +5,10 @@ import Header from './Components/Header';
 import Todolist from './Components/Todolist';
 import AddTask from './Components/AddTask';
 import CalendarComponent from './Components/Calendar';
+import  StaffName from './Components/StaffName';
 
 function App() {
+
   const [todolist, setTodolist] = useState([]);
   const [edittask, setEdittask] = useState(null);
   const [filter, setFilter] = useState('all');
@@ -53,10 +55,13 @@ function App() {
   function updateFilter(newFiltervalue){
     setFilter(newFiltervalue);
   }
-
+  
   return (
     <Container fluid="md">
       <Row>
+        <Col>
+          <StaffName userId={1} />
+        </Col>
         <Col>
           <Header />
         </Col>
